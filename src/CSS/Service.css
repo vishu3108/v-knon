@@ -1,0 +1,112 @@
+/* Background */
+.services-container {
+  background: linear-gradient(135deg, #edf4f8, #dbe8f0); /* Soft and professional gradient */
+  padding: 6rem 2rem 4rem;
+  color: #2b3a42; /* Professional dark gray */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-bottom: 4rem;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2b3a42; /* Dark slate gray */
+}
+
+.hero-section p {
+  font-size: 1.4rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #546a79; /* Subtle cool gray */
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+
+.stat-card {
+  background: #ffffff; /* Clean white background */
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08); /* Gentle shadow */
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent shadow */
+}
+
+.stat-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4a90e2; /* Professional blue */
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  color: #546a79; /* Subtle gray for text */
+}
+
+/* Services Section */
+.services-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.service-card {
+  background: #ffffff; /* Clean white background */
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Subtle hover shadow */
+}
+
+.service-card .icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #4a90e2; /* Calm blue */
+}
+
+.service-card:hover .icon {
+  color: #357abd; /* Deeper blue on hover */
+}
+
+.service-card h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2b3a42; /* Dark slate gray */
+}
+
+.service-card p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  color: #546a79; /* Cool gray-blue for description */
+}

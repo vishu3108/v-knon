@@ -1,0 +1,230 @@
+/* Updated CSS for a cleaner, single-row stats alignment with subtle styles */
+
+.about-container {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
+/* Updated Title */
+.about-title {
+    font-size: 3.5rem; /* Increased size */
+    font-family: 'Roboto', sans-serif; /* Changed font */
+    font-weight: bold;
+    color: #2a4d8c; /* Changed color to a different shade of blue */
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    color: #5f6b7a;
+}
+
+.about-description {
+    font-size: 1.4rem; /* Increased font size */
+    font-family: 'Montserrat', sans-serif; /* Changed font type */
+    color: #6a7f8c; /* Slightly lighter color for better readability */
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    flex-wrap: nowrap; /* Align stats in one row */
+    justify-content: space-around;
+    gap: 2rem; /* Increased gap between stat cards */
+    margin: 3rem 0;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    padding-right: 3rem; /* Increased right padding */
+}
+
+/* Stat Card */
+.stat-card {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a00); /* New gradient colors */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 200px; /* Reduced width */
+    min-width: 200px; /* Reduced width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00796b; /* Teal shade */
+    margin-bottom: 0.5rem;
+}
+
+.stat-text {
+    font-size: 1.2rem; /* Increased size */
+    font-family: 'Open Sans', sans-serif; /* Changed font */
+    color: #455a64; /* Subtle dark gray */
+}
+
+/* Decorative Illustration with faint shapes */
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 150, 136, 0.1); /* Transparent teal */
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(10px);
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 80px;
+    height: 80px;
+    background: rgba(76, 175, 80, 0.1); /* Transparent green */
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(15px);
+}
+
+.stat-card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Adjust Grid Layout and Increase Tile Spacing */
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Reduced tile size */
+    gap: 2rem; /* Increased gap between tiles */
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0 2rem; /* Left padding reduced, added equal right padding */
+}
+
+/* Adjusting Tile Size and Layout */
+.detail-card {
+    background: #ffffff;
+    border-radius: 15px; /* Slightly rounded corners for modern look */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px; /* Reduced minimum width */
+    width: 270px; /* Reduced width */
+    height: 350px; /* Fixed height for consistency */
+    margin: 0 auto; /* Centering tiles */
+}
+
+.detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.detail-icon {
+    font-size: 2.5rem; /* Larger icon size */
+    margin-bottom: 1.5rem; /* Space between icon and title */
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.detail-icon:hover {
+    transform: scale(1.2); /* Icon scale on hover for effect */
+}
+
+/* Title Styling */
+.detail-title {
+    font-size: 1.8rem; /* Increased font size for title */
+    font-family: 'Roboto', sans-serif; /* Changed font */
+    font-weight: bold;
+    color: #2c3e50; /* Darker color for contrast */
+    margin-bottom: 1rem; /* Space between title and text */
+}
+
+/* Text Styling (Subtitle) */
+.detail-text {
+    font-size: 1.2rem; /* Increased font size for readability */
+    font-family: 'Open Sans', sans-serif; /* Changed font */
+    color: #6a7f8c; /* Lighter gray for text */
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/* Background Styling for Tile */
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 150, 136, 0.1); /* Transparent teal background */
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(15px);
+}
+
+.detail-card::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    background: rgba(76, 175, 80, 0.1); /* Transparent green background */
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(20px);
+}
+
+/* Call to Action */
+.call-to-action {
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    background: #3b82f6; /* Appealing blue */
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.call-to-action:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        gap: 2rem;
+    }
+}

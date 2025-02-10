@@ -20,12 +20,12 @@ console.log('Filtered Details:', filteredDetails); // Log to ensure only 4 slide
 const Home = () => {
   return (
     <>
-      <HomeContainer>
-        <HomeContent>
-          <Heading1Container aria-label="Welcome to V-knon">Welcome To</Heading1Container>
-          <Heading2Container>V-knon Marketing</Heading2Container>
-          <SubText>Empowering Your Digital Presence</SubText>
-          <HomeButton>Get Started</HomeButton>
+      <HomeContainer className="home-container">
+        <HomeContent className="home-content">
+          <Heading1Container className="heading1-container" aria-label="Welcome to V-knon">Welcome To</Heading1Container>
+          <Heading2Container className="heading2-container">V-knon Marketing</Heading2Container>
+          <SubText className="sub-text">Empowering Your Digital Presence</SubText>
+          <HomeButton className="home-button">Get Started</HomeButton>
         </HomeContent>
       </HomeContainer>
 

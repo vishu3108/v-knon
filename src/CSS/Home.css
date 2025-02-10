@@ -27,11 +27,13 @@
     background-attachment: fixed;
     min-height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding-left: 5rem;
     color: white;
     flex-wrap: wrap;
+    margin-top: 0; /* Ensure no margin at the top */
+    padding-left: 5rem; /* Optional: Add some padding */
+    padding-top: 0; /* Ensure no padding is added at the top */
   }
   
   /* HomeContent */

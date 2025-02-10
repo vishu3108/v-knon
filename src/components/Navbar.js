@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-// Navbar Container
+// Navbar Container with a background image
 const NavBarContainer = styled.nav`
   position: fixed;
   top: 0;
@@ -17,13 +17,14 @@ const NavBarContainer = styled.nav`
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: ${(props) => (props.scroll ? '0 4px 12px rgba(0, 0, 0, 0.3)' : 'none')};
   backdrop-filter: blur(5px); /* Optional: adds blur effect */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Separate left and right sections */
+  align-items: center; /* Vertically align items */
 `;
 
 const NavLinks = styled.div`
   display: flex;
+  justify-content: flex-start;
   gap: 2rem;
   margin-left: 2rem;
 `;
@@ -40,6 +41,7 @@ const NavLink = styled(Link)`
   }
 `;
 
+// Right-side buttons container
 const ActionButtons = styled.div`
   display: flex;
   gap: 1.5rem;
@@ -49,7 +51,7 @@ const ActionButtons = styled.div`
 const Button = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 15px;
+  border-radius: 15px; /* Rounded border */
   font-size: 1rem;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -82,26 +84,28 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY > 50);
+      setScroll(window.scrollY > 50); // Changes style when scrolling 50px
     };
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      // window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <NavBarContainer scroll={scroll}>
+      {/* Left Navigation Links */}
       <NavLinks>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/services">Services</NavLink> {/* New Link for Services */}
         <NavLink to="/contact">Contact</NavLink>
       </NavLinks>
 
+      {/* Right-side Buttons */}
       <ActionButtons>
         <Button to="/login">Login</Button>
         <Button to="/free-trial">Free Trial</Button>

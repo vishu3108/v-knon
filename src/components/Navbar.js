@@ -15,7 +15,7 @@ const NavBarContainer = styled.nav`
   padding: 1rem 2rem;
   z-index: 100;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: ${(props) => (props.scroll ? '0 4px 12px rgba(0, 0, 0, 0.3)' : 'none')};
+box-shadow: ${(props) => (props.scroll ? '0 4px 12px rgba(0, 0, 0, 0.3)' : 'none')};
   backdrop-filter: blur(5px); /* Optional: adds blur effect */
   display: flex; /* Flexbox for alignment */
   justify-content: space-between; /* Separate left and right sections */
@@ -90,7 +90,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      // window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

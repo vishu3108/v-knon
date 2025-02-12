@@ -179,7 +179,7 @@ const Services = () => {
         "Boost your search rankings and drive organic traffic effectively with advanced SEO strategies.",
       extraContent:
         "Keyword research, on-page optimization, and backlink strategies.",
-      image: "/images/seo_optimization.png",
+      image: "/images/seo_service.png",
     },
     {
       icon: <FaUsers />,

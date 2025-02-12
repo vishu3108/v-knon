@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
-import ServicesPage from './ServicePage'; // Import ServicesPage component
 import { details } from './About'; // Import details array from About
+import Services from './Services';
 import { 
   HomeContainer, 
   HomeContent, 
@@ -33,8 +33,7 @@ const Home = () => {
         {/* Pass filtered slides */}
         <About slides={filteredDetails} />
       </Suspense>
-
-      <ServicesPage />
+      <Services/>
     </>
   );
 };

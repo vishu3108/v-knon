@@ -1,3 +1,4 @@
+/* Container for the entire contact section */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -7,68 +8,61 @@
   padding: 5rem 3rem;
 }
 
+/* Wrapper for the contact content */
+/* Wrapper for the contact content */
 .contact-wrapper {
   display: flex;
-  width: 85%;
+  width: 75%;
   max-width: 1300px;
   background: white;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 2rem;
+  gap: 1rem; /* Adjusted gap between image and form */
 }
 
-/* Left Side - Contact Info */
-.contact-info {
-  flex: 1;
-  background: #2c3e50;
-  color: white;
-  padding: 4rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-info .title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-.contact-info p {
-  font-size: 1.1rem;
-  margin-bottom: 2.5rem;
+/* Left Side - Image */
+.contact-image {
+  margin-left: 5rem;
+  flex: 0.8;
+  background-image: url('D:/Vishal/practice/public/images/contactus.png'); /* Ensure this path is correct */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5rem; /* Reduced margin to decrease space */
 }
 
 /* Right Side - Contact Form */
 .contact-form-wrapper {
-  flex: 1;
-  padding: 3rem;
+  flex: 1.2;
+  padding: 2.5rem; /* Reduced padding to decrease space */
 }
 
-.form-heading {
-  font-size: 2rem;
-  font-weight: bold;
+/* Centering the Contact Us heading */
+.contact-form-wrapper h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
   color: #333;
 }
 
+/* Form styling */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-/* Input Fields */
-.contact-form input {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.1rem;
+.contact-form input,
+.contact-form .submit-btn {
+  width: 80%; /* Reduced width */
+  margin-left: 15%; /* Shift fields to the left */
+  padding: 0.8rem;
+  font-size: 1rem;
   border: 2px solid #ccc;
   border-radius: 15px;
+  box-sizing: border-box;
 }
 
 .contact-form input:focus {
@@ -83,32 +77,23 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  margin-left: 15%; /* Align checkboxes with form fields */
 }
 
-.checkbox-heading {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: black;
-}
-
-/* Updated Checkbox Layout */
-.checkbox-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
 .checkbox-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.1rem;
-  width: calc(33.33% - 1rem); /* Three items per row with gap consideration */
+  font-size: 1rem;
+  width: calc(33.33% - 1rem);
+  box-sizing: border-box;
 }
+
 .checkbox-item input {
   width: auto;
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
+
 .checkbox-item label {
   color: black;
   font-weight: bold;
@@ -116,9 +101,10 @@
 
 /* Submit Button */
 .submit-btn {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.3rem;
+  width: 75%; /* Reduced width */
+  margin-left: 25%; /* Shift fields to the left */
+  padding: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: white;
   background-color: black;
@@ -126,6 +112,7 @@
   border-radius: 15px;
   cursor: pointer;
   margin-top: 1.5rem;
+  box-sizing: border-box;
 }
 
 .submit-btn:hover {
@@ -139,21 +126,27 @@
     padding: 2rem;
   }
 
-  .contact-info {
-    padding: 3rem;
-  }
-
   .contact-form-wrapper {
     padding: 2.5rem;
   }
 
-  .checkbox-items {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-image {
+    flex: 1;
+    height: 200px;
   }
-}
 
-@media (max-width: 600px) {
-  .checkbox-items {
-    grid-template-columns: repeat(1, 1fr);
+  .contact-form input,
+  .contact-form .submit-btn {
+    width: 100%; /* Full width on smaller screens */
+    margin-left: 0; /* Reset margin on smaller screens */
+  }
+
+  .checkbox-group {
+    margin-left: 0; /* Reset margin on smaller screens */
+    justify-content: center; /* Center checkboxes on smaller screens */
+  }
+
+  .checkbox-item {
+    width: 50%; /* Two checkboxes per row on smaller screens */
   }
 }

@@ -1,0 +1,101 @@
+/* Footer.css */
+.footer-container {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0.8rem; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 1rem; /* Reduced margin */
+  }
+  
+  .footer-section {
+    flex: 1 0 200px;
+    margin-bottom: 1.2rem; /* Reduced margin */
+    text-align: left;
+  }
+  
+  .footer-title {
+    font-size: 1.2rem; /* Font size unchanged */
+    margin-bottom: 0.7rem; /* Reduced margin */
+    color: #eee;
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-item {
+    margin-bottom: 0.3rem; /* Reduced margin */
+    font-size: 0.95rem; /* Font size unchanged */
+  }
+  
+  .footer-link {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem; /* Font size unchanged */
+  }
+  
+  .footer-link:hover {
+    color: #fff;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem; /* Reduced gap between icons */
+    margin-top: 0.6rem; /* Reduced margin */
+  }
+  
+  .social-icon-link {
+    color: #fff;
+    font-size: 1.3rem; /* Font size unchanged */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon-link:hover {
+    color: #007bff; /* Example hover color */
+  }
+  
+  .footer-copyright {
+    font-size: 0.9rem; /* Font size unchanged */
+    text-align: center;
+    padding-bottom: 0.4rem; /* Reduced Padding */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .footer-container {
+      padding: 1.2rem 0.6rem; /* Reduced padding on smaller screens */
+    }
+  
+    .footer-content {
+      margin-bottom: 0.8rem; /* Reduced margin on smaller screens */
+    }
+  
+    .footer-section {
+      margin-bottom: 1.2rem; /* Reduced margin on smaller screens */
+    }
+    .footer-title {
+      font-size: 1.1rem;
+    }
+    .footer-item {
+      font-size: 0.9rem;
+    }
+    .footer-link {
+      font-size: 0.9rem;
+    }
+      .social-icon-link {
+          font-size: 1.2rem;
+      }
+  }

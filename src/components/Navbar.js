@@ -13,9 +13,9 @@ const NavBarContainer = styled.nav`
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
   padding: 1rem 2rem;
-  z-index: 100;
+  z-index: 110;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-box-shadow: ${(props) => (props.scroll ? '0 4px 12px rgba(0, 0, 0, 0.3)' : 'none')};
+  box-shadow: ${(props) => (props.scroll ? '0 4px 12px rgba(0, 0, 0, 0.3)' : 'none')};
   backdrop-filter: blur(5px); /* Optional: adds blur effect */
   display: flex; /* Flexbox for alignment */
   justify-content: space-between; /* Separate left and right sections */

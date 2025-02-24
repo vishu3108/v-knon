@@ -28,10 +28,6 @@
     transition: transform 0.3s ease;
   }
   
-  .project-section:hover {
-    transform: scale(1.02); /* Slight hover effect */
-  }
-  
   /* Project Container */
   .project-container {
     display: flex;

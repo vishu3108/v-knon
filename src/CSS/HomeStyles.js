@@ -23,7 +23,7 @@ const fadeIn = keyframes`
 
 // Define styled components
 export const HomeContainer = styled.div`
-  background-image: url('/images/home-bkg3.png');
+  background-image: url('/images/Web_Backg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

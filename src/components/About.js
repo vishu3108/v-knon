@@ -82,7 +82,6 @@ const About = ({ slides = [] }) => {
         ))}
       </div>
 
-      <button className="call-to-action">Get Started</button>
     </section>
   );
 };

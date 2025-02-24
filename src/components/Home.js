@@ -10,6 +10,8 @@ import {
   SubText 
 } from '../CSS/HomeStyles'; // Import styled components
 import Contact from './Contact';
+import Projects from './Projects';
+import Testimonials from './Testimonials';
 
 const About = React.lazy(() => import('./About')); // Lazy load the About component
 
@@ -35,6 +37,8 @@ const Home = () => {
         <About slides={filteredDetails} />
       </Suspense>
       <Services/>
+      <Projects/>
+      <Testimonials/>
       <Contact/>
     </>
   );

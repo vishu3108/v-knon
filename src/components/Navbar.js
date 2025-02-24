@@ -7,7 +7,7 @@ const NavBarContainer = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  background-image: url('/images/home-bkg3.png');
+  background-image: url('/images/Web_Backg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

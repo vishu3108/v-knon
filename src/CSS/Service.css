@@ -1,6 +1,6 @@
 /* Background */
 .services-container {
-  background: linear-gradient(135deg, #edf4f8, #dbe8f0); /* Soft and professional gradient */
+  background: linear-gradient(145deg, #ffffff, #d9edfa); /* Soft and professional gradient */
   padding: 6rem 2rem 4rem;
   color: #2b3a42; /* Professional dark gray */
   text-align: center;
@@ -9,104 +9,315 @@
   position: relative;
 }
 
-/* Hero Section */
+/* Section Title with fade-in animation */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Content Wrapper for tiles and illustration */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+/* Tile Container for alternating positions */
+.tile-container {
+  flex: 1 1 45%;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+}
+.tile-container.align-right {
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+.tile-container:not(.align-right) {
+  justify-content: flex-start;
+}
+
+/* Individual Tile Styling */
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: tileAnimation 0.8s ease-in-out forwards;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+}
+
+@keyframes tileAnimation {
+  0% { opacity: 0; transform: scale(0.9) translateY(30px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Header Section with Icon and Title Centered */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Icon Styling */
+.icon-container {
+  font-size: 3rem;
+  color: #ff7e5f;
+}
+
+/* Tile Title */
+.tile-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Content Section */
+.content-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Tile Description */
+.tile-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Additional Content Section */
+.extra-content {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Illustration Styling */
+.illustration-wrapper {
+  flex: 1 1 45%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  margin-left: -30px;
+}
+
+/* Illustration for each service */
+.illustration {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Enquire Now Button */
+.enquire-button {
+  display: block;
+  margin: 2rem auto 0; /* Centers the button horizontally */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #ff7e5f;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquire-button:hover {
+  background-color: #e76f4f;
+}
+
+/* (Optional) Service Image Styling */
+.service-image {
+  display: block;
+  max-width: 100%;
+  margin: -2rem auto 1rem; /* Pull image up to reduce the gap */
+  border-radius: 10px;
+}
+
+/* Additional styles for hero & stats sections */
 .hero-section {
   margin-bottom: 4rem;
 }
-
 .hero-section h1 {
   font-size: 3.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #2b3a42; /* Dark slate gray */
+  color: #2b3a42;
 }
-
 .hero-section p {
   font-size: 1.4rem;
   opacity: 0.85;
   margin-bottom: 2rem;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #546a79; /* Subtle cool gray */
+  margin: 0 auto;
+  color: #546a79;
 }
 
-/* Stats Section */
 .stats-section {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 4rem;
   padding: 2rem;
 }
-
 .stat-card {
-  background: #ffffff; /* Clean white background */
+  background: #ffffff;
   padding: 2.5rem;
   border-radius: 12px;
   width: 250px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08); /* Gentle shadow */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
 }
-
 .stat-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12); /* Slightly more prominent shadow */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
 }
-
 .stat-card h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #4a90e2; /* Professional blue */
+  color: #4a90e2;
 }
-
 .stat-card p {
   font-size: 1.2rem;
   opacity: 0.8;
-  color: #546a79; /* Subtle gray for text */
+  color: #546a79;
 }
 
-/* Services Section */
+/* For the services grid (if used elsewhere) */
 .services-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 3rem;
   margin-top: 4rem;
 }
-
 .service-card {
-  background: #ffffff; /* Clean white background */
+  background: #ffffff;
   padding: 3rem;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
-
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Subtle hover shadow */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
-
 .service-card .icon {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  color: #4a90e2; /* Calm blue */
+  color: #4a90e2;
 }
-
 .service-card:hover .icon {
-  color: #357abd; /* Deeper blue on hover */
+  color: #357abd;
 }
-
 .service-card h3 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #2b3a42; /* Dark slate gray */
+  color: #2b3a42;
 }
-
 .service-card p {
   font-size: 1.2rem;
   opacity: 0.85;
-  color: #546a79; /* Cool gray-blue for description */
+  color: #546a79;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: left;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content form div {
+  margin-bottom: 1rem;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content textarea {
+  resize: vertical;
 }

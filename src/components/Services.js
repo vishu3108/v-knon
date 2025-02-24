@@ -1,167 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import React, { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 import { FaLaptopCode, FaChartLine, FaUsers, FaLightbulb } from "react-icons/fa";
-
-// Wrapper for the entire section
-const SectionWrapper = styled.div`
-  padding: 6rem 2rem;
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-`;
-
-// Section Title with fade-in animation
-const SectionTitle = styled(motion.h2)`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin-bottom: 3rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  animation: fadeIn 1.5s forwards;
-
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-`;
-
-// Content Wrapper for tiles and illustration
-const ContentWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  gap: 1.5rem;
-`;
-
-// Tile Container for alternating positions
-const TileContainer = styled.div`
-  flex: 1 1 45%;
-  min-width: 300px;
-  display: flex;
-  justify-content: ${(props) => (props.alignRight ? "flex-end" : "flex-start")};
-  align-items: center;
-  margin-right: ${(props) => (props.alignRight ? "30px" : "0")};
-`;
-
-// Individual Tile Styling
-const Tile = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 600px;
-  padding: 2rem 1.5rem;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-  text-align: center;
-  opacity: 0;
-  transform: scale(0.9);
-  animation: tileAnimation 0.8s ease-in-out forwards;
-
-  &:hover {
-    transform: translateY(-6px);
-  }
-
-  @keyframes tileAnimation {
-    0% { opacity: 0; transform: scale(0.9) translateY(30px); }
-    100% { opacity: 1; transform: scale(1) translateY(0); }
-  }
-`;
-
-// Header Section with Icon and Title Centered
-const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-`;
-
-// Centered Icon Styling
-const IconContainer = styled.div`
-  font-size: 3rem;
-  color: #ff7e5f;
-`;
-
-// Tile Title
-const TileTitle = styled.h3`
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #333;
-`;
-
-// Content Section
-const ContentContainer = styled.div`
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-`;
-
-// Tile Description
-const TileDescription = styled.p`
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-`;
-
-// Additional Content Section
-const ExtraContent = styled.div`
-  font-size: 1rem;
-  color: #777;
-  line-height: 1.4;
-`;
-
-// Illustration Styling
-const IllustrationWrapper = styled.div`
-  flex: 1 1 45%;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -50px;
-  margin-left: -30px;
-`;
-
-// Illustration for each service
-const Illustration = styled(motion.img)`
-  max-width: 100%;
-  max-height: 400px;
-  height: auto;
-  width: auto;
-  border-radius: 10px;
-  opacity: 0;
-  animation: fadeInUp 1s ease-in-out forwards;
-
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-`;
-
-// Tile Variant for animation
-const tileVariant = {
-  hidden: { opacity: 0, y: 50, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-  },
-};
+import "../CSS/Service.css"; // Import the CSS file
 
 const Services = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
+  const formRef = useRef();
+
   const services = [
     {
       icon: <FaLaptopCode />,
@@ -174,7 +20,7 @@ const Services = () => {
     },
     {
       icon: <FaChartLine />,
-      title: "SEO Optimization",
+      title: "Instagram & Facebook Marketing",
       description:
         "Boost your search rankings and drive organic traffic effectively with advanced SEO strategies.",
       extraContent:
@@ -192,7 +38,7 @@ const Services = () => {
     },
     {
       icon: <FaLightbulb />,
-      title: "Creative Branding",
+      title: "Business Growth & Consulting",
       description:
         "Craft unique and impactful brand identities to stand out in a competitive market.",
       extraContent:
@@ -201,53 +47,105 @@ const Services = () => {
     },
   ];
 
+  // Opens the modal form and sets the selected service
+  const handleEnquireNow = (serviceTitle) => {
+    setSelectedService(serviceTitle);
+    setShowForm(true);
+  };
+
+  // Closes the modal form
+  const closeModal = () => {
+    setShowForm(false);
+  };
+
+  // Handles form submission using EmailJS
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_3x3ttrv",    // Replace with your EmailJS service ID
+        "template_x3kbeqb",   // Replace with your EmailJS template ID
+        formRef.current,
+        "2cCZ1z04tFrzOaDi-"        // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Enquiry sent successfully!");
+          setShowForm(false);
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send enquiry. Please try again.");
+        }
+      );
+  };
+
   return (
-    <SectionWrapper>
-      <SectionTitle
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        Our Services
-      </SectionTitle>
-
+    <div className="services-container">
+      <h2 className="section-title">Our Services</h2>
       {services.map((service, index) => (
-        <ContentWrapper key={index}>
-          {/* Left Column: Illustration for index 1 and 3 */}
-          {(index === 1 || index === 3) && (
-            <IllustrationWrapper>
-              <Illustration src={service.image} alt="Illustration" />
-            </IllustrationWrapper>
+        <div className="content-wrapper" key={index}>
+          {((index === 1) || (index === 3)) && (
+            <div className="illustration-wrapper">
+              <img className="illustration" src={service.image} alt="Illustration" />
+            </div>
           )}
 
-          {/* Right Column: Tile */}
-          <TileContainer alignRight={index % 2 !== 0}>
-            <Tile
-              variants={tileVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <HeaderContainer>
-                <IconContainer>{service.icon}</IconContainer>
-                <TileTitle>{service.title}</TileTitle>
-              </HeaderContainer>
-              <ContentContainer>
-                <TileDescription>{service.description}</TileDescription>
-                <ExtraContent>{service.extraContent}</ExtraContent>
-              </ContentContainer>
-            </Tile>
-          </TileContainer>
+          <div className={`tile-container ${index % 2 !== 0 ? "align-right" : ""}`}>
+            <div className="tile">
+              <div className="header-container">
+                <div className="icon-container">{service.icon}</div>
+                <h3 className="tile-title">{service.title}</h3>
+              </div>
+              <div className="content-container">
+                <p className="tile-description">{service.description}</p>
+                <div className="extra-content">{service.extraContent}</div>
+              </div>
+              <button className="enquire-button" onClick={() => handleEnquireNow(service.title)}>
+                Enquire Now
+              </button>
+            </div>
+          </div>
 
-          {/* Left Column: Illustration for index 0 and 2 */}
-          {(index === 0 || index === 2) && (
-            <IllustrationWrapper>
-              <Illustration src={service.image} alt="Illustration" />
-            </IllustrationWrapper>
+          {((index === 0) || (index === 2)) && (
+            <div className="illustration-wrapper">
+              <img className="illustration" src={service.image} alt="Illustration" />
+            </div>
           )}
-        </ContentWrapper>
+        </div>
       ))}
-    </SectionWrapper>
+
+      {showForm && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
+            <h3>Enquire about {selectedService}</h3>
+            <form ref={formRef} onSubmit={handleSubmit}>
+              {/* Hidden field for service title */}
+              <input type="hidden" name="service_title" value={selectedService} />
+              <div>
+                <label>Name:</label>
+                <input type="text" name="user_name" required />
+              </div>
+              <div>
+                <label>Email:</label>
+                <input type="email" name="user_email" required />
+              </div>
+              <div>
+                <label>Message:</label>
+                <textarea name="message" required></textarea>
+              </div>
+              <button type="submit" className="enquire-button">
+                Send Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

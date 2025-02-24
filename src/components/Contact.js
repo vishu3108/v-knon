@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 import '../CSS/Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', mobile: '', email: '', preferences: [] });
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    preferences: [],
+  });
+  
+  const formRef = useRef();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -15,13 +23,32 @@ const Contact = () => {
           : prevData.preferences.filter((pref) => pref !== value),
       }));
     } else {
-      setFormData({ ...formData, [name]: value });
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message Sent!');
+    emailjs
+    .sendForm(
+      "service_3x3ttrv",    // Replace with your EmailJS service ID
+       "template_eqt9p2l",   // Replace with your EmailJS template ID
+       formRef.current,
+       "2cCZ1z04tFrzOaDi-" // Replace with your EmailJS public key
+     )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Message Sent!');
+        },
+        (error) => {
+          console.log(error.text);
+          alert('An error occurred, please try again.');
+        }
+      );
   };
 
   return (
@@ -51,6 +78,7 @@ const Contact = () => {
         >
           <h2 className="form-heading">Contact Us</h2>
           <motion.form
+            ref={formRef}
             className="contact-form"
             onSubmit={handleSubmit}
             initial={{ scale: 0.9 }}
@@ -61,7 +89,7 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Your Name"
-              value={formData.name}
+              value={formData.user_name}
               onChange={handleChange}
               whileFocus={{ scale: 1.05 }}
             />
@@ -69,7 +97,7 @@ const Contact = () => {
               type="tel"
               name="mobile"
               placeholder="Your Mobile Number"
-              value={formData.mobile}
+              value={formData.user_mobile}
               onChange={handleChange}
               whileFocus={{ scale: 1.05 }}
             />
@@ -91,6 +119,7 @@ const Contact = () => {
                     name="preferences"
                     value={preference}
                     onChange={handleChange}
+                    checked={formData.preferences.includes(preference)}
                   />
                   <label>{preference}</label>
                 </div>

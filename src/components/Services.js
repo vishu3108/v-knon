@@ -16,7 +16,7 @@ const Services = () => {
         "Build responsive and user-friendly websites tailored to your needs with the latest technologies.",
       extraContent:
         "Fast loading, SEO optimization, and a focus on user experience.",
-      image: "/images/web_dev_icon.png",
+      image: "/images/web_dev.png",
     },
     {
       icon: <FaChartLine />,
@@ -25,7 +25,7 @@ const Services = () => {
         "Boost your search rankings and drive organic traffic effectively with advanced SEO strategies.",
       extraContent:
         "Keyword research, on-page optimization, and backlink strategies.",
-      image: "/images/seo_service.png",
+      image: "/images/facebook_insta.png",
     },
     {
       icon: <FaUsers />,
@@ -34,8 +34,8 @@ const Services = () => {
         "Grow your audience, engage with followers, and manage your brand’s online presence efficiently.",
       extraContent:
         "Authentic content creation and audience engagement on major platforms.",
-      image: "/images/soc_med_gra.png",
-    },
+      image: "/images/Branding.png",
+    }, 
     {
       icon: <FaLightbulb />,
       title: "Business Growth & Consulting",
@@ -43,7 +43,7 @@ const Services = () => {
         "Craft unique and impactful brand identities to stand out in a competitive market.",
       extraContent:
         "Comprehensive branding solutions including logos and color schemes.",
-      image: "/images/branding.png",
+      image: "/images/Business_Growth.png",
     },
   ];
 

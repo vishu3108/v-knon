@@ -6,8 +6,11 @@ import '../CSS/Contact.css';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    mobile: '',
+    city: '',
     email: '',
+    mobile: '',
+    businessName: '',
+    businessType: '',
     preferences: [],
   });
   
@@ -33,12 +36,12 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-    .sendForm(
-      "service_3x3ttrv",    // Replace with your EmailJS service ID
-       "template_eqt9p2l",   // Replace with your EmailJS template ID
-       formRef.current,
-       "2cCZ1z04tFrzOaDi-" // Replace with your EmailJS public key
-     )
+      .sendForm(
+        "service_3x3ttrv",    // Replace with your EmailJS service ID
+        "template_eqt9p2l",   // Replace with your EmailJS template ID
+        formRef.current,
+        "2cCZ1z04tFrzOaDi-"   // Replace with your EmailJS public key
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -46,7 +49,7 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-          alert('An error occurred, please try again.');
+          alert('Please Fill All Details ');
         }
       );
   };
@@ -76,7 +79,7 @@ const Contact = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="form-heading">Contact Us</h2>
+          <h2 className="form-heading">Connect With Us !</h2>
           <motion.form
             ref={formRef}
             className="contact-form"
@@ -85,34 +88,76 @@ const Contact = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <motion.input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.user_name}
-              onChange={handleChange}
-              whileFocus={{ scale: 1.05 }}
-            />
-            <motion.input
-              type="tel"
-              name="mobile"
-              placeholder="Your Mobile Number"
-              value={formData.user_mobile}
-              onChange={handleChange}
-              whileFocus={{ scale: 1.05 }}
-            />
-            <motion.input
-              type="email"
-              name="email"
-              placeholder="Your Email (Optional)"
-              value={formData.email}
-              onChange={handleChange}
-              whileFocus={{ scale: 1.05 }}
-            />
+            {/* Row 1: Name and City */}
+            <div className="form-row">
+              <motion.input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                whileFocus={{ scale: 1.05 }}
+              />
+              <motion.input
+                type="text"
+                name="city"
+                placeholder="Your City"
+                value={formData.city}
+                onChange={handleChange}
+                whileFocus={{ scale: 1.05 }}
+              />
+            </div>
+
+            {/* Row 2: Email and Mobile */}
+            <div className="form-row">
+              <motion.input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                whileFocus={{ scale: 1.05 }}
+              />
+              <motion.input
+                type="tel"
+                name="mobile"
+                placeholder="Your Mobile Number"
+                value={formData.mobile}
+                onChange={handleChange}
+                whileFocus={{ scale: 1.05 }}
+              />
+            </div>
+
+            {/* Row 3: Business Name and Business Type */}
+            <div className="form-row">
+              <motion.input
+                type="text"
+                name="businessName"
+                placeholder="Your Business Name"
+                value={formData.businessName}
+                onChange={handleChange}
+                whileFocus={{ scale: 1.05 }}
+              />
+              <motion.input
+                type="text"
+                name="businessType"
+                placeholder="Your Business Type"
+                value={formData.businessType}
+                onChange={handleChange}
+                whileFocus={{ scale: 1.05 }}
+              />
+            </div>
 
             {/* Checkbox Options */}
             <div className="checkbox-group">
-              {['Call', 'Email', 'WhatsApp', 'SMS', 'Telegram'].map((preference) => (
+              {[
+                "Digital Marketing",
+                "Social media",
+                "Business Strategy",
+                "Whatsapp",
+                "YouTube",
+                "Google Maps"
+              ].map((preference) => (
                 <div className="checkbox-item" key={preference}>
                   <input
                     type="checkbox"

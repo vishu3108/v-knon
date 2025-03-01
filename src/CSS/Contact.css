@@ -5,10 +5,9 @@
   align-items: center;
   min-height: 100vh;
   background-color: #f8f9fa;
-  padding: 3rem 3rem;
+  padding: 3rem;
 }
 
-/* Wrapper for the contact content */
 /* Wrapper for the contact content */
 .contact-wrapper {
   display: flex;
@@ -19,24 +18,24 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 2rem;
-  gap: 1rem; /* Adjusted gap between image and form */
+  gap: 1rem;
 }
 
 /* Left Side - Image */
 .contact-image {
   margin-left: 5rem;
   flex: 0.8;
-  background-image: url('D:/Vishal/practice/public/images/contactus.png'); /* Ensure this path is correct */
+  background-image: url('D:/Vishal/practice/public/images/contactus.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 0.5rem; /* Reduced margin to decrease space */
+  margin-right: 0.5rem;
 }
 
 /* Right Side - Contact Form */
 .contact-form-wrapper {
   flex: 1.2;
-  padding: 2.5rem; /* Reduced padding to decrease space */
+  padding: 2.5rem;
 }
 
 /* Centering the Contact Us heading */
@@ -54,10 +53,11 @@
   gap: 1.2rem;
 }
 
+/* Global input styles for non-row inputs (if any) */
+/* These are now overridden by row-specific styles */
 .contact-form input,
 .contact-form .submit-btn {
-  width: 80%; /* Reduced width */
-  margin-left: 15%; /* Shift fields to the left */
+  /* Removed margin-left for consistent alignment */
   padding: 0.8rem;
   font-size: 1rem;
   border: 2px solid #ccc;
@@ -71,21 +71,39 @@
   box-shadow: 0 0 12px rgba(243, 156, 18, 0.3);
 }
 
-/* Checkbox Group */
+/* New Row Layout for Inputs */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-row input {
+  width: 48%;  /* roughly half the width */
+  margin: 0;   /* remove inherited margin */
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* Updated Checkbox Group Layout for Two Rows */
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
-  margin-left: 15%; /* Align checkboxes with form fields */
+  margin-left: 0; /* Aligns with the form rows */
+  justify-content: flex-start;
 }
 
 .checkbox-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.5rem;
+  width: calc(33.33% - 1rem);  /* 3 checkboxes per row */
   font-size: 1rem;
-  width: calc(33.33% - 1rem);
   box-sizing: border-box;
 }
 
@@ -95,23 +113,22 @@
 }
 
 .checkbox-item label {
-  color: black;
+  color: rgb(75, 75, 75);
   font-weight: bold;
 }
 
-/* Submit Button */
+/* Adjusted Submit Button */
 .submit-btn {
-  width: 75%; /* Reduced width */
-  margin-left: 25%; /* Shift fields to the left */
+  width: 80%;
+  margin: 1.5rem auto 0;  /* centers the button */
   padding: 0.8rem;
   font-size: 1.1rem;
   font-weight: bold;
   color: white;
-  background-color: black;
+  background-color: #4d4aff;
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 1.5rem;
   box-sizing: border-box;
 }
 
@@ -137,16 +154,23 @@
 
   .contact-form input,
   .contact-form .submit-btn {
-    width: 100%; /* Full width on smaller screens */
-    margin-left: 0; /* Reset margin on smaller screens */
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input {
+    width: 100%;
   }
 
   .checkbox-group {
-    margin-left: 0; /* Reset margin on smaller screens */
-    justify-content: center; /* Center checkboxes on smaller screens */
+    justify-content: center;
   }
 
   .checkbox-item {
-    width: 50%; /* Two checkboxes per row on smaller screens */
+    width: calc(33.33% - 1rem);
   }
 }

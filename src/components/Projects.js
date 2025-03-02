@@ -7,75 +7,72 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Mr. Rollwala",
-      description:
-        "Mr. Rollwala is a food café that specializes in providing unique food experiences. We assisted them in boosting their sales through effective social media marketing, business tips, promotional offers, and Google Maps management.",
+      "title": "Mr. Rollwala",
+      "description": "Mr. Rollwala is a food café that specializes in providing unique food experiences. We assisted them in boosting their sales through effective social media marketing, business tips, promotional offers, and Google Maps management.",
+      "image": "../images/Rollwala.png",
+      "services": [
+          "Social Media Marketing",
+          "Google Maps Reviews and Ratings",
+          "Offers/Promotions Creation",
+          "Zomato & Swiggy Monitoring & Analysis"
+      ],
+      "stats": [
+          { "label": "Increased Sales", "value": "30%" },
+          { "label": "Social Media Followers Gained", "value": "600+" },
+          { "label": "Promotions Created", "value": "50+" },
+          { "label": "Google Maps Visits", "value": "350+" }
+      ],
+      "gallery": [
+          "../images/Gal_Roll_1.jpg",
+          "../images/Gal_Roll_2.jpg",
+          "../images/Gal_Roll_5.jpeg",
+          "../images/Gal_Roll_4.jpeg"
+      ]
+    },  
+    {
+      "title": "Spandan Dental Clinic",
+      "description": "Spandan Dental Clinic is a premium dental care provider. We enhanced their online presence through strategic social media marketing, Google Maps reviews and ratings management, and the creation of educational content to engage and inform patients. Our efforts helped establish a strong digital footprint, attracting new patients and building trust within the community.",
+      "image": "../images/spand_prof.png",
+      "services": [
+          "Social Media Marketing",
+          "Google Maps Reviews and Ratings",
+          "Strong Online Presence",
+          "Educational Content Creation"
+      ],
+      "stats": [
+          { "label": "New Patients Gained", "value": "100+" },
+          { "label": "Social Media Followers Gained", "value": "150+" },
+          { "label": "Google Maps Visits", "value": "5000+" },
+          { "label": "Social Media Reach", "value": "1Lakh +" }
+      ],
+      "gallery": [
+          "../images/Gal_Spand_8.png",
+          "../images/Gal_Spand_2.png",
+          "../images/Gal_Spand_4.png",
+          "../images/Gal_Spand_5.png"
+      ]
+    },  
+    {
+      title: "Mr.Rollwala - SambhajiNagar",
+     description: "Mr. Rollwala is a popular food café known for its delicious rolls and unique food experiences. We helped them grow by leveraging strategic social media marketing, managing Google Maps reviews and ratings, creating enticing promotional offers, and monitoring Zomato to enhance their online presence and customer engagement.",
       image: "../images/Rollwala.png",
-      services: [
-        "Social Media Marketing to Boost Online Presence",
-        "Business Tips to Increase Operational Efficiency",
-        "Creation of Engaging Promotional Offers",
-        "Google Maps Creation and Management to Enhance Visibility",
-      ],
+      "services": [
+        "Social Media Marketing",
+        "Google Maps Reviews and Ratings",
+        "Business Anlysis and Promotions Creation",
+        "Zomato & Swiggy Monitoring & Analysis"
+    ],
       stats: [
-        { label: "Increased Sales", value: "20%" },
-        { label: "Social Media Followers Gained", value: "5K+" },
-        { label: "Promotions Created", value: "15+" },
-        { label: "Google Maps Visits", value: "500+" },
+        { label: "Social Media Reach", value: "2Lakh +" },
+        { label: "Increased Sales", value: "25%" },
+        { label: "Google Maps Reviews", value: "70+" },
+        { label: "Promotions Created ", value: "25+" }
       ],
       gallery: [
-        "../images/Gal_Roll_1.jpg",
-        "../images/Gal_Roll_2.jpg",
-        "../images/Gal_Roll_1.jpg",
-        "../images/Gal_Roll_2.jpg",
-      ],
-    },
-    {
-      title: "Spandan Dental Clinic",
-      description:
-        "Spandan Dental Clinic is a premium dental care provider. We revamped their online presence, including designing their website, setting up online appointment booking, and running digital ad campaigns to attract new patients.",
-      image: "../images/spand_prof.png",
-      services: [
-        "Website Design and Development",
-        "Online Appointment Booking System",
-        "Digital Marketing Campaigns",
-        "Branding and Identity Design",
-      ],
-      stats: [
-        { label: "Appointments Booked", value: "200+" },
-        { label: "New Patients Gained", value: "50+" },
-        { label: "Website Traffic Growth", value: "75%" },
-        { label: "Ad Campaigns Run", value: "10+" },
-      ],
-      gallery: [
-        "../images/Gal_Spand_1.png",
-        "../images/Gal_Spand_1.png",
-        "../images/Gal_Spand_1.png",
-        "../images/Gal_Spand_1.png",
-      ],
-    },
-    {
-      title: "Hotel LokhandeWada",
-      description:
-        "Hotel LokhandeWada is a traditional family-owned restaurant. We modernized their brand, created a new menu design, and implemented customer feedback mechanisms for better service quality.",
-      image: "../images/Lokhande_Prof.png",
-      services: [
-        "Brand Modernization",
-        "Menu Design and Layout",
-        "Customer Feedback Mechanisms",
-        "Social Media Promotions",
-      ],
-      stats: [
-        { label: "Customer Retention", value: "30%" },
-        { label: "Social Media Engagement", value: "1K+" },
-        { label: "Positive Reviews", value: "95%" },
-        { label: "Menu Redesigns", value: "3" },
-      ],
-      gallery: [
-        "../images/Gal_Lokhande_1.jpg",
-        "../images/Gal_Lokhande_1.jpg",
-        "../images/Gal_Lokhande_1.jpg",
-        "../images/Gal_Lokhande_1.jpg",
+        "../images/Gal_Roll_S_2.jpeg",
+        "../images/Gal_Roll_S_1.png",
+        "../images/Gal_Roll_S_3.jpeg",
+        "../images/Gal_Roll_3.jpeg",
       ],
     },
   ];
@@ -162,7 +159,7 @@ const Projects = () => {
 
             {/* Gallery Section */}
             <div className="project-gallery">
-              <h3 className="gallery-title">Our Designs</h3>
+              <h3 className="gallery-title">Our Designs & Results</h3>
               <div className="gallery-container">
                 {projects[activeTab].gallery.map((image, index) => (
                   <motion.img

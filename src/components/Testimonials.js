@@ -4,36 +4,48 @@ import "../CSS/Testimonials.css"; // Import the CSS file
 const testimonials = [
   {
     id: 1,
-    name: "Parag ",
+    name: "Mr. Parag",
     designation: "Mr Rollwala",
-    review:
-      "This service transformed our business – highly recommended! Their attention to detail and commitment to excellence are unmatched. We saw results almost immediately.",
-    image: "../images/parag_testi.jpeg",
+    review: (
+      <>
+        We've been collaborating with <strong>V-Knon</strong> since our opening. They have consistently delivered <strong>outstanding results</strong> for Mr. Rollwala. They stay up to date with social media trends like <strong>memes</strong> and <strong>reels</strong>, which helps <strong>attract</strong> and <strong>engage</strong> our audience effectively.
+      </>
+    ),
+    image: "../images/parag_testi.jpeg"
   },
   {
     id: 2,
-    name: "Chetan",
+    name: "Mr. Chetan",
     designation: "Hotel Lokhandewada",
-    review:
-      "Innovative, professional, and absolutely reliable. A great experience from start to finish. The team truly understands our needs and delivers above expectations.",
-    image: "../images/chetan_testi.jpeg",
+    review: (
+      <>
+        One of <strong>V-Knon's greatest strengths</strong> is their <strong>deep understanding</strong> of the local audience. Their <strong>unique approach</strong> and strategic insights consistently deliver <strong>outstanding results</strong>, making them a <strong>trusted partner</strong> for our business.
+      </>
+    ),
+    image: "../images/chetan_testi.jpeg"
   },
   {
     id: 3,
-    name: "Dr.Rohant Dhake",
-    designation: "Spandan Dental CLinic",
-    review:
-      "Their expertise and commitment set them apart. The detailed strategy they provided gave us a clear roadmap for growth and success. We couldn't be happier.",
-    image: "../images/Spand_testi.jpg",
+    name: "Dr. Rohant Dhake",
+    designation: "Spandan Dental Clinic",
+    review: (
+      <>
+        What sets <strong>V-Knon</strong> apart is their <strong>unwavering commitment</strong>—they treat our business as their own. Their <strong>deep expertise</strong>, thorough understanding of our needs, and <strong>strategic approach</strong> ensure <strong>exceptional results</strong> every time.
+      </>
+    ),
+    image: "../images/Spand_testi.jpg"
   },
   {
     id: 4,
-    name: "Ritesh",
-    designation: "Mr Rollwala,Aurangabad",
-    review:
-      "Outstanding support and innovative solutions throughout our project. Their insights and hands-on approach helped us launch our product with great success.",
-    image: "../images/ritesh_testi.jpeg",
-  },
+    name: "Mr. Ritesh",
+    designation: "Mr Rollwala, Aurangabad",
+    review: (
+      <>
+        We have worked with <strong>V-Knon</strong> for almost <strong>two years</strong>, and they truly understand the <strong>restaurant business</strong>. Their <strong>creative designs</strong> and <strong>marketing strategies</strong> attract and engage customers effectively.
+      </>
+    ),
+    image: "../images/ritesh_testi.jpeg"
+  }
 ];
 
 const Testimonials = () => {

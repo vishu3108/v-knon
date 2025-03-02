@@ -70,7 +70,7 @@ const Projects = () => {
       ],
       gallery: [
         "../images/Gal_Roll_S_2.jpeg",
-        "../images/Gal_Roll_S_1.png",
+        "../images/Gal_Roll_S_1.",
         "../images/Gal_Roll_S_3.jpeg",
         "../images/Gal_Roll_3.jpeg",
       ],
@@ -100,8 +100,6 @@ const Projects = () => {
           <motion.div
             className="project-section"
             key={activeTab}
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.5 }}
           >
             <div className="project-container">
               {/* Left Section: Image and Description */}

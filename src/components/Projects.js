@@ -70,7 +70,7 @@ const Projects = () => {
       ],
       gallery: [
         "../images/Gal_Roll_S_2.jpeg",
-        "../images/Gal_Roll_S_1.",
+        "../images/Gal_Roll_S_1.png",
         "../images/Gal_Roll_S_3.jpeg",
         "../images/Gal_Roll_3.jpeg",
       ],

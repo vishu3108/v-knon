@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Services from './components/Services';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
       {/* Footer appears below all routes */}
       <Footer />

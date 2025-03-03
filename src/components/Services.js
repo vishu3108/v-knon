@@ -12,37 +12,29 @@ const Services = () => {
     {
       icon: <FaLaptopCode />,
       title: "Website Development",
-      description:
-        "Build responsive and user-friendly websites tailored to your needs with the latest technologies.",
-      extraContent:
-        "Fast loading, SEO optimization, and a focus on user experience.",
+      description: "Create responsive, fast, and user-friendly websites using the latest technologies to ensure a seamless digital experience.",
+      extraContent: "Optimized for performance, SEO-friendly, and designed for maximum engagement.",
       image: "/images/web_dev.png",
     },
     {
       icon: <FaChartLine />,
       title: "Instagram & Facebook Marketing",
-      description:
-        "Boost your search rankings and drive organic traffic effectively with advanced SEO strategies.",
-      extraContent:
-        "Keyword research, on-page optimization, and backlink strategies.",
+      description: "Enhance brand visibility and drive engagement through targeted social media marketing strategies on Instagram and Facebook.",
+      extraContent: "Content creation, ad campaigns, audience targeting, and analytics tracking.",
       image: "/images/facebook_insta.png",
     },
     {
       icon: <FaUsers />,
       title: "Social Media Management",
-      description:
-        "Grow your audience, engage with followers, and manage your brand’s online presence efficiently.",
-      extraContent:
-        "Authentic content creation and audience engagement on major platforms.",
+      description: "Build and maintain a strong online presence by managing social media accounts with engaging and relevant content.",
+      extraContent: "Content scheduling, community engagement, and performance tracking across major platforms.",
       image: "/images/Branding.png",
-    }, 
+    },
     {
       icon: <FaLightbulb />,
       title: "Business Growth & Consulting",
-      description:
-        "Craft unique and impactful brand identities to stand out in a competitive market.",
-      extraContent:
-        "Comprehensive branding solutions including logos and color schemes.",
+      description: "Strategic consulting to help businesses scale, optimize operations, and improve profitability with data-driven insights.",
+      extraContent: "Market analysis, business strategies, and growth planning for sustainable success.",
       image: "/images/Business_Growth.png",
     },
   ];

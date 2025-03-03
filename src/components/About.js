@@ -1,41 +1,34 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { FaUsers, FaBullseye, FaStar, FaGlobe } from 'react-icons/fa';
+import { FaUsers, FaLightbulb, FaCogs, FaTrophy } from 'react-icons/fa';
 import '../CSS/About.css';
 
 // Default Details
 export const details = [
-  { icon: <FaUsers />, color: '#ff6b6b', title: 'Who We Are', text: 'A team of experienced marketers and creatives...' },
-  { icon: <FaBullseye />, color: '#5dd39e', title: 'Our Mission', text: 'To empower businesses with tools and strategies...' },
-  { icon: <FaStar />, color: '#ffd93d', title: 'Why Choose Us', text: 'With over a decade of expertise...' },
-  { icon: <FaGlobe />, color: '#4c84ff', title: 'Global Reach', text: 'We connect businesses with audiences worldwide...' }
-  
+  { icon: <FaUsers />, color: '#ff6b6b', title: 'Who We Are', text: 'We are a team of skilled marketers and creative professionals dedicated to helping businesses grow with innovative strategies and fresh ideas.' },
+ { icon: <FaLightbulb />, color: '#f79d65', title: 'What Makes Us Different', text: 'We combine data-driven insights, creative marketing, and a customer-first approach to provide customized solutions that truly make a difference.' },
+  { icon: <FaCogs />, color: '#6a89cc', title: 'Our Process', text: 'Our structured process includes in-depth business analysis, strategic planning, creative execution, and performance optimization to ensure success.' },
+  { icon: <FaTrophy />, color: '#9b59b6', title: 'Our Success Stories', text: 'Our strategies have helped businesses increase their sales, boost engagement, and build strong brand identities, leading to measurable success.' }
 ];
 
 const About = ({ slides = [] }) => {
   const [counts, setCounts] = useState([0, 0, 0]);
 
-  const stats = useMemo(
-    () => [
-      { number: 6, text: 'Years of Experience' },
-      { number: 10, text: 'Clients' },
-      { number: 15, text: 'Projects Completed' },
-    ],
-    []
-  );
+  const stats = useMemo(() => [
+    { number: 6, text: 'Years of Experience' },
+    { number: 10, text: 'Clients' },
+    { number: 15, text: 'Projects Completed' },
+  ], []);
 
   // Ensure slides always have 8 items
   const defaultSlides = useMemo(() => {
-    if (slides.length >= 8) {
-      return slides.slice(0, 8); // Use the first 8 slides if more than 8
-    }
-    return [...slides, ...details.slice(slides.length, 8)]; // Fill missing slides from `details`
+    return slides.length >= 8 ? slides.slice(0, 8) : [...slides, ...details.slice(slides.length, 8)];
   }, [slides]);
 
   useEffect(() => {
     stats.forEach((stat, index) => {
       let start = 0;
       const end = stat.number;
-      const interval = setInterval(() => {
+      const updateCount = () => {
         start += 1;
         setCounts((prevCounts) => {
           const updatedCounts = [...prevCounts];
@@ -43,15 +36,13 @@ const About = ({ slides = [] }) => {
           return updatedCounts;
         });
 
-        if (start >= end) {
-          clearInterval(interval);
+        if (start < end) {
+          requestAnimationFrame(updateCount);
         }
-      }, 50);
+      };
+      updateCount();
     });
   }, [stats]);
-
-  console.log('Received slides in About.js:', slides); // Debugging
-  console.log('Default slides being used:', defaultSlides); // Debugging
 
   return (
     <section className="about-container">
@@ -81,7 +72,6 @@ const About = ({ slides = [] }) => {
           </div>
         ))}
       </div>
-
     </section>
   );
 };

@@ -137,3 +137,12 @@
   list-style: none;
   padding: 1.2rem 0;
 }
+@media (max-width: 1080px) {
+  .site-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+}

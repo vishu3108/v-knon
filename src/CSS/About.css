@@ -222,10 +222,53 @@
     transform: scale(1.05);
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
+
+@media (max-width: 1080px) {
+    /* Adjust stats to be displayed one by one */
     .stats-section {
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem; /* Increased spacing for better proportion */
+        overflow-x: hidden;
+        padding-right: 0;
+    }
+    
+    .stat-card {
+        width: 100%; /* Increased width to consume proportionate space */
+        min-width: unset;
+        padding: 2rem; /* Increased padding for better spacing */
+    }
+    
+    .stat-number {
+        font-size: 3rem; /* Increased font size for better emphasis */
+    }
+
+    .stat-text {
+        font-size: 1.4rem; /* Increased text size for better readability */
+    }
+
+    /* Adjust details section to be displayed one by one */
+    .details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* Increased spacing for better separation */
+        padding: 0;
+    }
+    
+    .detail-card {
+        width: 60%; /* Adjust width for better fit on smaller screens */
+        min-width: unset;
+        height: auto; /* Allow height to adjust dynamically */
+        padding: 2.5rem; /* Increased padding for better proportion */
+        border-radius: 3rem;
+    }
+    
+    /* Adjust about description for better readability */
+    .about-description {
+        font-size: 1.6rem; /* Increased font size for better readability */
+        text-align: justify; /* Adjusted alignment for better reading experience */
+        padding: 0 1.5rem;
     }
 }

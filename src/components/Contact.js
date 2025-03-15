@@ -155,7 +155,7 @@ const Contact = () => {
                 "Social media",
                 "Business Strategy",
                 "Whatsapp",
-                "YouTube",
+                "YouTube Analysis",
                 "Google Maps"
               ].map((preference) => (
                 <div className="checkbox-item" key={preference}>

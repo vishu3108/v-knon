@@ -3,9 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: #f8f9fa;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 /* Wrapper for the contact content */
@@ -25,7 +24,7 @@
 .contact-image {
   margin-left: 5rem;
   flex: 0.8;
-  background-image: url('D:/Vishal/practice/public/images/contactus.png');
+  background-image: url('/public/images/contactus.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -88,33 +87,36 @@
   box-sizing: border-box;
 }
 
-/* Updated Checkbox Group Layout for Two Rows */
+/* Updated Checkbox Group Layout for Proper Row & Column Alignment */
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1rem; /* Space between items */
   margin-top: 1rem;
-  margin-left: 0; /* Aligns with the form rows */
-  justify-content: flex-start;
+  justify-content: flex-start; /* Align items properly */
+  align-items: center; /* Align vertically */
 }
 
 .checkbox-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: calc(33.33% - 1rem);  /* 3 checkboxes per row */
+  width: calc(33.33% - 1rem); /* 3 checkboxes per row */
   font-size: 1rem;
   box-sizing: border-box;
+  flex-grow: 1; /* Ensures items grow evenly */
 }
 
 .checkbox-item input {
   width: auto;
   transform: scale(1.1);
+  margin-right: 5px; /* Space between checkbox and label */
 }
 
 .checkbox-item label {
   color: rgb(75, 75, 75);
   font-weight: bold;
+  white-space: nowrap; /* Prevents text from breaking */
 }
 
 /* Adjusted Submit Button */
@@ -137,10 +139,12 @@
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .contact-wrapper {
     flex-direction: column;
-    padding: 2rem;
+    /* padding: 2rem; */
+    margin-left: 2.5rem;
+    margin-right: 2.5;
   }
 
   .contact-form-wrapper {
@@ -148,22 +152,16 @@
   }
 
   .contact-image {
-    flex: 1;
-    height: 200px;
+    margin-left: 0;
+    flex: auto;
+    height: 820px;
+    width: 100%;
+    display: block;
   }
 
   .contact-form input,
   .contact-form .submit-btn {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .form-row {
-    flex-direction: column;
-  }
-
-  .form-row input {
-    width: 100%;
+    width: 60%;
   }
 
   .checkbox-group {
@@ -171,6 +169,12 @@
   }
 
   .checkbox-item {
-    width: calc(33.33% - 1rem);
+    width: calc(50% - 1rem); /* 2 checkboxes per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-item {
+    width: 100%; /* 1 checkbox per row on very small screens */
   }
 }

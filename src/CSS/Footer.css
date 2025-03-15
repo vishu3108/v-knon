@@ -1,101 +1,126 @@
 /* Footer.css */
 .footer-container {
-    background-color: #333;
-    color: white;
-    padding: 1.5rem 0.8rem; /* Reduced padding */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  background-color: #333;
+  color: white;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: #eee;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-item {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-link {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.social-icon-link {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon-link:hover {
+  color: #007bff;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1080px) {
   .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 1rem; /* Reduced margin */
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
-  
+
+  .footer-top {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+  }
+
   .footer-section {
-    flex: 1 0 200px;
-    margin-bottom: 1.2rem; /* Reduced margin */
-    text-align: left;
+      flex: 1 1 45%;
+      text-align: center;
   }
-  
-  .footer-title {
-    font-size: 1.2rem; /* Font size unchanged */
-    margin-bottom: 0.7rem; /* Reduced margin */
-    color: #eee;
+
+  .footer-contact {
+      width: 100%;
+      text-align: center;
   }
-  
-  .footer-list {
-    list-style: none;
-    padding: 0;
+}
+
+@media (max-width: 1080px) {
+  .footer-top {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  .footer-item {
-    margin-bottom: 0.3rem; /* Reduced margin */
-    font-size: 0.95rem; /* Font size unchanged */
+
+  .footer-section {
+      flex: 1 1 100%;
   }
-  
-  .footer-link {
-    color: #ddd;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 0.95rem; /* Font size unchanged */
-  }
-  
-  .footer-link:hover {
-    color: #fff;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem; /* Reduced gap between icons */
-    margin-top: 0.6rem; /* Reduced margin */
-  }
-  
-  .social-icon-link {
-    color: #fff;
-    font-size: 1.3rem; /* Font size unchanged */
-    transition: color 0.3s ease;
-  }
-  
-  .social-icon-link:hover {
-    color: #007bff; /* Example hover color */
-  }
-  
-  .footer-copyright {
-    font-size: 0.9rem; /* Font size unchanged */
-    text-align: center;
-    padding-bottom: 0.4rem; /* Reduced Padding */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 900px) {
-    .footer-container {
-      padding: 1.2rem 0.6rem; /* Reduced padding on smaller screens */
-    }
-  
-    .footer-content {
-      margin-bottom: 0.8rem; /* Reduced margin on smaller screens */
-    }
-  
-    .footer-section {
-      margin-bottom: 1.2rem; /* Reduced margin on smaller screens */
-    }
-    .footer-title {
-      font-size: 1.1rem;
-    }
-    .footer-item {
-      font-size: 0.9rem;
-    }
-    .footer-link {
-      font-size: 0.9rem;
-    }
-      .social-icon-link {
-          font-size: 1.2rem;
-      }
-  }
+}

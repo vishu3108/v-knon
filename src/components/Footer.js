@@ -18,8 +18,8 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Quick Links</h3>
           <ul className="footer-list">
-          <li className="footer-item"><a className="footer-link" href="/">Home</a></li>
-            <li className="footer-item"><a className="footer-link" href="/services">Services</a></li> {/* Example: Add valid hrefs */}
+            <li className="footer-item"><a className="footer-link" href="/">Home</a></li>
+            <li className="footer-item"><a className="footer-link" href="/services">Services</a></li>
             <li className="footer-item"><a className="footer-link" href="/projects">Projects</a></li>
             <li className="footer-item"><a className="footer-link" href="/about">About</a></li>
           </ul>
@@ -28,19 +28,17 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Contact Info</h3>
           <ul className="footer-list">
-            <li className="footer-item">
-             Ruppayan, Oriental Bank Lane,<br />Aundh, Pune
-            </li>
-            <li className="footer-item">Email: v-knonmarketing@gmail.com</li> {/* No href needed for email (consider mailto:) */}
-            <li className="footer-item">Phone: 9156541988</li> {/* No href needed for phone */}
+            <li className="footer-item">Ruppayan, Oriental Bank Lane, Aundh, Pune</li>
+            <li className="footer-item">Email: <a href="mailto:v-knonmarketing@gmail.com" className="footer-link">v-knonmarketing@gmail.com</a></li>
+            <li className="footer-item">Phone: <a href="tel:+919156541988" className="footer-link">9156541988</a></li>
           </ul>
         </div>
       </div>
 
       <div className="social-icons">
-        <a className="social-icon-link" href="https://www.facebook.com/share/163ir4ojSJ/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a> {/* Valid hrefs */}
-        <a className="social-icon-link" href="https://www.instagram.com/digital_vishal31?igsh=MWZucTdqdWNkbDdzag==/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a className="social-icon-link" href="www.linkedin.com/in/vishal--patil/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+        <a className="social-icon-link" href="https://www.facebook.com/share/163ir4ojSJ/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+        <a className="social-icon-link" href="https://www.instagram.com/digital_vishal31" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+        <a className="social-icon-link" href="https://www.linkedin.com/in/vishal--patil/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
       </div>
 
       <p className="footer-copyright">&copy; 2024 V-Knon Marketing. All rights reserved.</p>

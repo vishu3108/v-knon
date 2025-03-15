@@ -1,5 +1,8 @@
 import React from "react";
-import "../CSS/Testimonials.css"; // Import the CSS file
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../CSS/Testimonials.css"; // Import CSS file
 
 const testimonials = [
   {
@@ -49,23 +52,37 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3, // Default: Show 3 cards on desktop
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  centerMode: true,
+  centerPadding: "20px",
+ 
+};
+
+
   return (
     <div className="testimonials-container">
       <h2 className="testimonials-title">Testimonials</h2>
-      <div className="testimonials-grid">
+      <Slider {...settings}>
         {testimonials.map((item) => (
           <div className="testimonial-card" key={item.id}>
-            <img
-              src={item.image}
-              alt={item.name}
-              className="testimonial-photo"
-            />
-            <h3 className="testimonial-name">{item.name}</h3>
-            <p className="testimonial-designation">{item.designation}</p>
+            <div className="testimonial-header">
+              <img src={item.image} alt={item.name} className="testimonial-photo" />
+              <div className="testimonial-info">
+                <h3 className="testimonial-name">{item.name}</h3>
+                <p className="testimonial-designation">{item.designation}</p>
+              </div>
+            </div>
             <p className="testimonial-review">{item.review}</p>
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };

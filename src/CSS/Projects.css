@@ -1,291 +1,328 @@
 /* Main Projects Section */
 .projects-section {
-    padding: 60px 20px;
-    background-color: #fff; /* White background */
-    color: #333;
-    text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 48px;
+  color: #0056b3;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-bottom: 60px;
+  transition: transform 0.3s ease;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.project-left,
+.project-right {
+  flex: 1;
+  max-width: 48%;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-description {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.project-title {
+  font-size: 36px;
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.project-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-services {
+  margin-top: 0;
+  padding: 40px;
+  border-radius: 15px;
+  color: #333;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out forwards;
+}
+
+.project-services::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  background: url('https://www.svgrepo.com/show/103033/illustration.svg') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #0056b3;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.service-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 24px;
+  line-height: 1.9;
+  color: #333;
+}
+
+.service-list li {
+  margin: 18px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #0056b3;
+}
+
+.service-list li:hover {
+  transform: translateX(15px);
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border-left: 4px solid #007bff;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
-  
-  /* Section Title */
-  .section-title {
-    font-size: 48px; /* Increased font size */
-    color: #0056b3; /* Darker blue for contrast */
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  
-  /* Individual Project Section */
-  .project-section {
-    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
-    padding: 50px;
-    margin-bottom: 60px;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Project Container */
+}
+
+.project-stats {
+  margin-top: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-item {
+  background: #f9fbfd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  box-shadow: 0 6px 25px rgba(0, 123, 255, 0.4);
+  transform: translateY(-10px);
+}
+
+.stat-value {
+  font-size: 36px;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #555;
+}
+
+@media (max-width: 1080px) {
   .project-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-direction: column;
   }
-  
-  /* Left Section (Image and Description) */
+
   .project-left,
   .project-right {
-    flex: 1;
-    max-width: 48%;
+    max-width: 100%;
   }
-  
-  .project-image {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Image shadow */
-  }
-  
-  .project-description {
-    margin-top: 20px;
-    font-size: 20px; /* Increased font size */
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  /* Title */
-  .project-title {
-    font-size: 36px; /* Increased font size */
-    color: #0056b3;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-  
-  /* Right Section (Services) */
-  .project-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Updated background, size, font size, and animation for service section */
-  .project-services {
-    margin-top: 0; /* Removed extra margin */
-    padding: 40px;
-    border-radius: 15px;
-    color: #333; /* Darker font color */
-    position: relative;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Larger shadow */
-    animation: slideIn 1s ease-out forwards; /* Added slide-in animation */
-  }
-  
-  /* Custom illustration (using a light pattern graphic) */
-  .project-services::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 100px;
-    height: 100px;
-    background: url('https://www.svgrepo.com/show/103033/illustration.svg') no-repeat center center;
-    background-size: cover;
-    z-index: 1;
-    opacity: 0.1; /* Lighter opacity for subtle background */
-  }
-  
-  /* Section Title */
-  .section-heading {
-    font-size: 40px; /* Increased font size */
-    margin-top: 0; /* Removed extra margin */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #0056b3; /* Dark blue for contrast */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Darker shadow for contrast */
-  }
-  
-  /* Updated Service List */
-  .service-list {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: 24px; /* Increased font size */
-    line-height: 1.9;
-    color: #333; /* Darker font color */
-  }
-  
-  .service-list li {
-    margin: 18px 0;
-    padding: 12px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1); /* Light overlay */
-    transition: all 0.3s ease;
-    border-left: 4px solid #0056b3; /* Dark blue left border */
-  }
-  
-  /* Added hover effects with background change and slight transform */
-  .service-list li:hover {
-    transform: translateX(15px); /* Slide effect */
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    border-left: 4px solid #007bff; /* Lighter blue border on hover */
-  }
-  
-  /* Animation for the service section */
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Stats Section */
-  .project-stats {
-    margin-top: 40px;
-  }
-  
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  .stat-item {
-    background: #f9fbfd; /* Subtle light background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .stat-item:hover {
-    box-shadow: 0 6px 25px rgba(0, 123, 255, 0.4); /* Vibrant hover shadow */
-    transform: translateY(-10px);
-  }
-  
-  .stat-value {
-    font-size: 36px;
-    color: #007bff;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .stat-label {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .project-container {
-      flex-direction: column;
-    }
-  
-    .project-left,
-    .project-right {
-      max-width: 100%;
-    }
-  
-    .stats-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .tabs {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 40px;
-    width: 100%; /* Ensure tabs take up the entire row */
-    justify-content: space-between; /* Spread out the tabs evenly */
-  }
-  
-  .tab {
-    background-color: transparent;
-    padding: 15px 0;
-    font-size: 32px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    flex: 1;
-    text-align: center;
-    color: #333;
-    position: relative;
-  }
-  
-  .tab.active {
-    color: #007bff;
-  }
-  
-  .tab.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #007bff; /* Blue underline */
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .tabs {
-      flex-direction: column; /* Stack tabs vertically on small screens */
-    }
-  
-    .tab {
-      margin-bottom: 15px; /* Add margin between stacked tabs */
-    }
-  }
-  .gallery-title {
 
-    font-family: 'Dancing Script', cursive; /* Elegant cursive font */
-    font-size: 2.5em; /* Larger size for more impact */
-    color: #007bff; /* Vibrant green */
-    padding: 10px 20px; /* Add padding for better spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
-    transition: all 0.3s ease; /* Smooth transition effect */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    align-items: center;
+    width: 40%;
+    margin: 2px auto;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tab {
+  background-color: transparent;
+  padding: 15px 0;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  flex: 1;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.tab.active {
+  color: #007bff;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #007bff;
+}
+
+@media (max-width: 1080px) {
+  .tabs {
+    flex-direction: column;
+  }
+  .tab {
+    margin-bottom: 15px;
+  }
+}
+
+/* 📸 Gallery Styles */
+.gallery-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  color: #007bff;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.gallery-container img {
+  width: calc(25% - 20px);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Navigation Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* 📱 Mobile Gallery Slider */
+@media (max-width: 1080px) {
+  .gallery-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
   }
 
   .gallery-container {
     display: flex;
-    justify-content: space-between; /* Ensures equal spacing */
-    gap: 20px; /* Adds space between images */
-    margin-top: 20px;
-    padding: 10px 0;
-    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    animation: autoSlide 30s infinite linear;
   }
-  
+
   .gallery-container img {
-    width: calc(25% - 20px); /* Allocates each image 25% of the row, accounting for gap */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    scroll-snap-align: center;
+    transition: transform 0.5s ease-in-out;
   }
-  
-  .gallery-container img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+
+  .gallery-container::-webkit-scrollbar {
+    display: none;
   }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 768px) {
-    .gallery-container {
-      flex-direction: column; /* Stacks images vertically on small screens */
-      gap: 15px; /* Reduces gap for smaller screens */
-    }
-  
-    .gallery-container img {
-      width: 100%; /* Images take up full width on small screens */
-    }
+
+
 }

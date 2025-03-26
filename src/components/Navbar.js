@@ -7,7 +7,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScroll(window.scrollY > 50);
+    const handleScroll = () => {
+      const scrollThreshold = window.innerWidth < 768 ? 30 : 50; // Lower threshold for mobile
+      setScroll(window.scrollY > scrollThreshold);
+    };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

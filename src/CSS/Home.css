@@ -63,7 +63,7 @@
 .home-content {
   z-index: 10;
   padding: 2rem;
-  max-width: 600px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +71,7 @@
   animation: fadeIn 1.5s ease forwards;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .home-content {
     align-items: center;
     text-align: center;
@@ -83,11 +83,8 @@
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid white;
   width: 100%;
   max-width: 25ch;
-  opacity: 0;
-  animation: typing 1.5s steps(25) 0.5s forwards, blink 0.5s step-end infinite, scaleIn 1.5s ease forwards;
 }
 
 .heading2-container {

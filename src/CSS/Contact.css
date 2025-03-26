@@ -139,7 +139,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .contact-wrapper {
     flex-direction: column;
     /* padding: 2rem; */

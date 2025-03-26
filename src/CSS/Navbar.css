@@ -10,7 +10,7 @@
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
-  z-index: 110;
+  z-index: 1.1;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@
 }
 
 /* Center Title on Mobile */
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .site-title {
     position: absolute;
     left: 50%;
@@ -63,7 +63,7 @@
 }
 
 /* Hide Navbar Links on Mobile */
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .nav-links {
     display: none;
   }
@@ -78,7 +78,7 @@
   display: none; /* Hide on Desktop */
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .menu-icon {
     display: block;
   }
@@ -137,7 +137,7 @@
   list-style: none;
   padding: 1.2rem 0;
 }
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .site-title {
     position: absolute;
     left: 50%;

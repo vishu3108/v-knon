@@ -26,8 +26,8 @@ const Home = () => {
           <div className="heading1-container" aria-label="Welcome to V-knon">
             Welcome To
           </div>
-          <div className="heading2-container">V-knon Marketing</div>
-          <p className="sub-text">Its Your Will To Be Known By Your Customers...</p>
+          <div className="heading2-container">Digital Sarthi</div>
+          <p className="sub-text">Sarthi of Your Digital Success...</p>
           <button className="home-button" onClick={scrollToComponents}>Get Started</button>
         </div>
       </div>

@@ -121,7 +121,7 @@ const Contact = () => {
               <motion.input
                 type="tel"
                 name="mobile"
-                placeholder="Your Mobile Number"
+                placeholder="Mobile Number"
                 value={formData.mobile}
                 onChange={handleChange}
                 whileFocus={{ scale: 1.05 }}
@@ -133,7 +133,7 @@ const Contact = () => {
               <motion.input
                 type="text"
                 name="businessName"
-                placeholder="Your Business Name"
+                placeholder="Business Name"
                 value={formData.businessName}
                 onChange={handleChange}
                 whileFocus={{ scale: 1.05 }}
@@ -141,7 +141,7 @@ const Contact = () => {
               <motion.input
                 type="text"
                 name="businessType"
-                placeholder="Your Business Type"
+                placeholder="Business Type"
                 value={formData.businessType}
                 onChange={handleChange}
                 whileFocus={{ scale: 1.05 }}
@@ -154,9 +154,9 @@ const Contact = () => {
                 "Digital Marketing",
                 "Social media",
                 "Business Strategy",
-                "Whatsapp",
+                "Google Maps",
                 "YouTube Analysis",
-                "Google Maps"
+                "WhatsApp  "
               ].map((preference) => (
                 <div className="checkbox-item" key={preference}>
                   <input

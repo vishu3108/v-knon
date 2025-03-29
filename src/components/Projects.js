@@ -198,12 +198,17 @@ const Projects = () => {
                 </div>
               ) : (
                 // Mobile: Single image slide
-                <motion.img
+                <motion.div
+                className="gallery-wrapper"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                >
+                <img
                   src={projects[activeTab].gallery[galleryIndex]}
                   alt="Gallery"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
+                  className="gallery-image"
                 />
+              </motion.div>
               )}
             </div>
 

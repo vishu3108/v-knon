@@ -1,3 +1,4 @@
+/* Keyframe Animations */
 @keyframes typing {
   from {
     width: 0;
@@ -37,29 +38,34 @@
   }
 }
 
+/* Home Container */
 .home-container {
   background-image: url('/public/images/Web_Backg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 100vh; /* Keep home section's height fixed */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 5rem;
+  padding-left: 5rem; /* Add padding to left */
   color: white;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden; /* Ensure no content spills */
 }
 
-@media (max-width: 1080px) {
+/* Mobile adjustments for home container */
+@media (max-width: 768px) {
   .home-container {
-    min-height: 50vh; 
-    padding-left: 2rem;
-    justify-content: center;
-    text-align: center;
+    min-height: 50vh;  /* Adjust height for smaller screens */
+    padding-left: 2rem; /* Reduce padding */
+    justify-content: center; /* Align content in center */
+    text-align: center; /* Center the content */
   }
 }
 
+/* Home Content */
 .home-content {
   z-index: 10;
   padding: 2rem;
@@ -71,13 +77,16 @@
   animation: fadeIn 1.5s ease forwards;
 }
 
+/* Mobile specific for home content */
 @media (max-width: 768px) {
   .home-content {
     align-items: center;
     text-align: center;
+    padding: 1rem; /* Reduce padding */
   }
 }
 
+/* Heading 1 Container */
 .heading1-container {
   font-size: clamp(2.4rem, 4.5vw, 5rem);
   font-weight: bold;
@@ -87,6 +96,7 @@
   max-width: 25ch;
 }
 
+/* Heading 2 Container */
 .heading2-container {
   font-size: clamp(2.4rem, 4.5vw, 4.5rem);
   font-weight: bold;
@@ -102,6 +112,7 @@
   animation: typing 1.5s steps(25) 2.5s forwards, blink 0.5s step-end infinite;
 }
 
+/* Home Button */
 .home-button {
   padding: 1rem 2rem;
   margin-top: 2rem;
@@ -124,6 +135,7 @@
   transform: scale(1.1);
 }
 
+/* Sub Text */
 .sub-text {
   font-size: 1.3rem;
   margin-top: 1rem;
@@ -138,10 +150,14 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 1080px) {
+/* Mobile specific adjustments for sub-text */
+@media (max-width: 768px) {
   .sub-text {
     text-align: center;
     margin-left: 0;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -154,7 +170,7 @@
 
   .home-content {
     padding: 1rem;
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .heading1-container, 

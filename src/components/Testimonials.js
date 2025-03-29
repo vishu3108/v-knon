@@ -53,17 +53,32 @@ const testimonials = [
 
 const Testimonials = () => {
   const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3, // Default: Show 3 cards on desktop
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  centerMode: true,
-  centerPadding: "20px",
- 
-};
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Default: Show 3 cards on desktop
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "20px",
+    responsive: [
+      {
+        breakpoint: 1024, // For tablet view
+        settings: {
+          slidesToShow: 2, // Show 2 cards on tablets
+          centerPadding: "10px",
+        },
+      },
+      {
+        breakpoint: 768, // For mobile view
+        settings: {
+          slidesToShow: 1, // Show 1 card on mobile
+          centerPadding: "20px", // Padding to avoid edge touching
+        },
+      },
+    ],
+  };
 
 
   return (

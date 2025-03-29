@@ -137,44 +137,67 @@
 .submit-btn:hover {
   background-color: #333;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
+  .contact-container
+  {
+    padding: 0%;
+    margin: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
   .contact-wrapper {
     flex-direction: column;
-    /* padding: 2rem; */
-    margin-left: 2.5rem;
-    margin-right: 2.5;
   }
-
+  .contact-form {
+    gap :1rem;
+  }
   .contact-form-wrapper {
-    padding: 2.5rem;
+    padding: 0;
+    flex: 1;
+    margin-top: 0.2rem;
   }
 
   .contact-image {
     margin-left: 0;
     flex: auto;
-    height: 820px;
-    width: 100%;
+    height: 50vh; /* Allow height to adjust proportionally */
+    width: 100%; /* Full width of the container */
     display: block;
+    padding: 0;
+    margin: 0;
+    background-size: contain; /* Ensures the image scales proportionally */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents repeating the background */
   }
 
-  .contact-form input,
+  .contact-form input
+  {
+    margin-left: 0;
+    width: 100%;
+  }
   .contact-form .submit-btn {
-    width: 60%;
+    width: 100%;
   }
 
-  .checkbox-group {
-    justify-content: center;
-  }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;  /* Allow items to wrap */
+      gap: 1rem; /* Space between checkboxes */
+      justify-content: flex-start; /* Align items to the left */
+    }
 
-  .checkbox-item {
-    width: calc(50% - 1rem); /* 2 checkboxes per row on smaller screens */
-  }
+    /* Make each checkbox item take up half the container width (2 per row) */
+    .checkbox-item {
+      width: calc(50% - 0.5rem);  /* 2 checkboxes per row */
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: inherit;
+    }
+    .checkbox-item label {
+      font-size: 1rem;
+    }
+
 }
 
-@media (max-width: 480px) {
-  .checkbox-item {
-    width: 100%; /* 1 checkbox per row on very small screens */
-  }
-}

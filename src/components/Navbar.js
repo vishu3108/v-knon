@@ -4,7 +4,7 @@ import '../CSS/Navbar.css';
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Ensure it's false initially
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +15,10 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu open/close
+  };
 
   return (
     <nav className={`navbar ${scroll ? 'navbar-scroll' : ''}`}>
@@ -28,17 +32,17 @@ const Navbar = () => {
       </div>
 
       {/* Website Title (V-Knon Marketing) */}
-      <div className="site-title">V-Knon Marketing</div>
+      <div className="site-title">Digital Sarthi</div>
 
       {/* Hamburger Icon for Mobile */}
-      <div className="menu-icon" onClick={() => setMenuOpen(true)}>
+      <div className="menu-icon" onClick={toggleMenu}>
         ☰
       </div>
 
       {/* Sidebar Menu (Mobile) */}
       <div className={`nav-menu ${menuOpen ? 'open' : ''}`}>
         {/* Close Button (Moved to Left) */}
-        <div className="close-icon" onClick={() => setMenuOpen(false)}>✖</div>
+        <div className="close-icon" onClick={toggleMenu}>✖</div>
 
         <ul className="nav-links-sidebar">
           <li><Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link></li>

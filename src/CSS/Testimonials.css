@@ -104,13 +104,14 @@
 @media (max-width: 768px) {
   .slick-slider {
       max-width: 100%;
-      padding: 0 10px;
+      padding: 2 10px;
+
   }
 
   .testimonial-card {
       width: 85%;
-      height: auto;
+      height: 300px;
       margin: 0 auto 15px;
-      padding: 1.5rem;
+      padding: 1rem;
   }
 }

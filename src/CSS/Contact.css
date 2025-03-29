@@ -5,6 +5,7 @@
   align-items: center;
   background-color: #f8f9fa;
   padding: 1rem;
+  padding-top: 2rem;
 }
 
 /* Wrapper for the contact content */
@@ -195,6 +196,7 @@
       gap: 0.5rem;
       white-space: inherit;
     }
+
     .checkbox-item label {
       font-size: 1rem;
     }

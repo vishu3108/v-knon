@@ -10,8 +10,7 @@
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
-  padding-right: 0%;
-  z-index:9999;
+  z-index: 9999;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   justify-content: space-between;
@@ -54,14 +53,27 @@
   right: 150px; /* Increased Right Margin */
 }
 
-/* Center Title on Mobile */
+/* Center Title on Mobile in a Linear Fashion */
 @media (max-width: 768px) {
-  .site-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  .navbar {
+    display: flex;
+    justify-content: center;  /* Aligning everything to the center */
+    padding: 0.5rem 0.6rem;  /* Small top and bottom padding */
   }
 
+  .site-title {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    position: static;  /* Remove absolute positioning */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    text-align: center;  /* Make sure the text is centered */
+  }
+
+  /* Keep Hamburger Menu on the Left */
+  .menu-icon {
+    position: absolute;
+    left: 20px; /* Ensure it's positioned on the left */
+  }
 }
 
 /* Hide Navbar Links on Mobile */
@@ -138,13 +150,4 @@
 .nav-links-sidebar li {
   list-style: none;
   padding: 1.2rem 0;
-}
-@media (max-width: 768px) {
-  .site-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    white-space: nowrap;
-  }
 }

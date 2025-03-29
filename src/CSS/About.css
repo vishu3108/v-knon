@@ -4,8 +4,7 @@
     padding: 4rem 2rem;
     background-color: #f9f9f9;
     text-align: center;
-    
-  }
+}
 
 /* Updated Title */
 .about-title {
@@ -26,44 +25,50 @@
 }
 
 .about-description {
+    
     font-size: 1.4rem; /* Increased font size */
     font-family: 'Montserrat', sans-serif; /* Changed font type */
     color: #6a7f8c; /* Slightly lighter color for better readability */
     line-height: 1.8;
     max-width: 900px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.5rem; /* Adjusted margin to remove redundant spacing */
+    padding: 0 1.5rem; /* Added some internal padding for better alignment */
 }
 
+/* Stats Section */
 .stats-section {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 4rem;
     padding: 2rem;
-  }
-  .stat-card1     {
+}
+
+.stat-card1 {
     background: #ffffff;
-    /* padding: 2.5rem; */
     border-radius: 12px;
     width: 250px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
-  }
-  .stat-card1:hover {
+}
+
+.stat-card1:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
-  }
-  .stat-card1 h2 {
+}
+
+.stat-card1 h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #4a90e2;
-  }
-  .stat-card1 p {
+}
+
+.stat-card1 p {
     font-size: 1.2rem;
     opacity: 0.8;
     color: #546a79;
-  }
-  
+}
+
 .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
@@ -96,7 +101,6 @@
     position: absolute;
     bottom: -10px;
     right: -10px;
-    /* width: 80px; */
     height: 80px;
     background: rgba(76, 175, 80, 0.1); /* Transparent green */
     border-radius: 50%;
@@ -112,17 +116,17 @@
 /* Adjust Grid Layout and Increase Tile Spacing */
 .details-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Reduced tile size */
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 2rem; /* Increased gap between tiles */
     justify-content: center;
     margin-top: 2rem;
-    padding: 0 2rem; /* Left padding reduced, added equal right padding */
+    padding: 0 2rem;
 }
 
 /* Adjusting Tile Size and Layout */
 .detail-card {
     background: #ffffff;
-    border-radius: 15px; /* Slightly rounded corners for modern look */
+    border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     padding-top: 3rem;
@@ -132,10 +136,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 250px; /* Reduced minimum width */
-    width: 200px; /* Reduced width */
-    height: 350px; /* Fixed height for consistency */
-    margin: 0 auto; /* Centering tiles */
+    min-width: 250px;
+    width: 200px;
+    height: 350px;
+    margin: 0 auto;
 }
 
 .detail-card:hover {
@@ -145,30 +149,30 @@
 
 /* Icon Styling */
 .detail-icon {
-    font-size: 2.5rem; /* Larger icon size */
-    margin-bottom: 1.5rem; /* Space between icon and title */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     color: inherit;
     transition: transform 0.3s ease;
 }
 
 .detail-icon:hover {
-    transform: scale(1.2); /* Icon scale on hover for effect */
+    transform: scale(1.2);
 }
 
 /* Title Styling */
 .detail-title {
-    font-size: 1.8rem; /* Increased font size for title */
-    font-family: 'Roboto', sans-serif; /* Changed font */
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #2c3e50; /* Darker color for contrast */
-    margin-bottom: 1rem; /* Space between title and text */
+    color: #2c3e50;
+    margin-bottom: 1rem;
 }
 
 /* Text Styling (Subtitle) */
 .detail-text {
-    font-size: 1.2rem; /* Increased font size for readability */
-    font-family: 'Open Sans', sans-serif; /* Changed font */
-    color: #6a7f8c; /* Lighter gray for text */
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #6a7f8c;
     line-height: 1.6;
     margin-top: 0.5rem;
 }
@@ -204,7 +208,7 @@
 .call-to-action {
     margin-top: 3rem;
     padding: 1rem 3rem;
-    background: #3b82f6; /* Appealing blue */
+    background: #3b82f6;
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
@@ -219,53 +223,53 @@
     transform: scale(1.05);
 }
 
-
 @media (max-width: 1080px) {
-    /* Adjust stats to be displayed one by one */
     .stats-section {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem; /* Increased spacing for better proportion */
+        gap: 2rem;
         overflow-x: hidden;
     }
-    
+
     .stat-card {
-        width: 40%; /* Increased width to consume proportionate space */
+        width: 40%;
         min-width: unset;
-        padding: 2rem; /* Increased padding for better spacing */
+        padding: 2rem;
         border-radius: 3rem;
     }
-    
+
     .stat-number {
-        font-size: 3rem; /* Increased font size for better emphasis */
+        font-size: 3rem;
     }
 
     .stat-text {
-        font-size: 1.4rem; /* Increased text size for better readability */
+        font-size: 1.4rem;
     }
 
-    /* Adjust details section to be displayed one by one */
     .details-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem; /* Increased spacing for better separation */
+        gap: 2rem;
         padding: 0;
     }
-    
+
     .detail-card {
-        width: 60%; /* Adjust width for better fit on smaller screens */
+        width: 60%;
         min-width: unset;
-        height: auto; /* Allow height to adjust dynamically */
-        padding: 2.5rem; /* Increased padding for better proportion */
+        height: auto;
+        padding: 2.5rem;
         border-radius: 3rem;
     }
-    
-    /* Adjust about description for better readability */
+
     .about-description {
-        font-size: 1.6rem; /* Increased font size for better readability */
-        text-align: justify; /* Adjusted alignment for better reading experience */
-        padding: 0 1.5rem;
+        font-size: 1.4rem;
+        /* text-align: justify; */
+        padding: 0 1rem;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-bottom: 2rem; /* Adjusted margin for more breathing room */
+        /* min-width: unset; */
     }
 }

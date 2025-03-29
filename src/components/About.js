@@ -48,10 +48,8 @@ const About = ({ slides = [] }) => {
     <section className="about-container">
       <h2 className="about-title">About Us</h2>
       <p className="about-description">
-        We are a leading digital agency, committed to transforming businesses into powerful brands. With a team of
-        passionate professionals, we deliver exceptional results through innovation and creativity.
+        We are a leading digital agency, committed to transforming businesses into powerful brands. With a team of passionate professionals, we deliver exceptional results through innovation and creativity.
       </p>
-
       <div className="stats-section">
         {stats.map((stat, index) => (
           <div key={index} className="stat-card1">

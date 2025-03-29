@@ -228,7 +228,6 @@
         justify-content: center;
         gap: 2rem; /* Increased spacing for better proportion */
         overflow-x: hidden;
-        padding-right: 0;
     }
     
     .stat-card {

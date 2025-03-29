@@ -25,7 +25,7 @@ const testimonials = [
         One of <strong>V-Knon's greatest strengths</strong> is their <strong>deep understanding</strong> of the local audience. Their <strong>unique approach</strong> and strategic insights consistently deliver <strong>outstanding results</strong>, making them a <strong>trusted partner</strong> for our business.
       </>
     ),
-    image: "../images/chetan_testi.jpeg"
+    image: "../images/chetan_testimon.jpeg"
   },
   {
     id: 3,

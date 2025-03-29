@@ -272,6 +272,9 @@
 
 /* Tablet Portrait and below */
 @media (max-width: 768px) {
+  .services-container{
+    padding-top: 4rem;
+  }
 
   /* Stack content for mobile devices */
   .content-wrapper {
@@ -282,7 +285,7 @@
   /* Tile container */
   .tile-container {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   /* Alignment of images and tiles */
@@ -305,7 +308,7 @@
   /* Modal content */
   .modal-content {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }
 

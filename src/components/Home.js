@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="home-container">
+      <div className="home-container2">
         <div className="home-content">
           <div className="heading1-container" aria-label="Welcome to V-knon">
             Welcome To

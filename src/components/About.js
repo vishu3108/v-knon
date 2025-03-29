@@ -54,7 +54,7 @@ const About = ({ slides = [] }) => {
 
       <div className="stats-section">
         {stats.map((stat, index) => (
-          <div key={index} className="stat-card">
+          <div key={index} className="stat-card1">
             <h2 className="stat-number">{counts[index]}</h2>
             <p className="stat-text">{stat.text}</p>
           </div>

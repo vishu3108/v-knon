@@ -4,6 +4,7 @@
     padding: 4rem 2rem;
     background-color: #f9f9f9;
     text-align: center;
+    
   }
 
 /* Updated Title */
@@ -19,7 +20,7 @@
 .description {
     font-size: 1.2rem;
     line-height: 1.6;
-    max-width: 900px;
+    max-width: 90%;
     margin: 0 auto 3rem;
     color: #5f6b7a;
 }
@@ -39,25 +40,25 @@
     margin-bottom: 4rem;
     padding: 2rem;
   }
-  .stat-card {
+  .stat-card1     {
     background: #ffffff;
-    padding: 2.5rem;
+    /* padding: 2.5rem; */
     border-radius: 12px;
     width: 250px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
   }
-  .stat-card:hover {
+  .stat-card1:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
   }
-  .stat-card h2 {
+  .stat-card1 h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #4a90e2;
   }
-  .stat-card p {
+  .stat-card1 p {
     font-size: 1.2rem;
     opacity: 0.8;
     color: #546a79;
@@ -77,7 +78,7 @@
 }
 
 /* Decorative Illustration with faint shapes */
-.stat-card::before {
+.stat-card1::before {
     content: '';
     position: absolute;
     top: -10px;
@@ -90,12 +91,12 @@
     filter: blur(10px);
 }
 
-.stat-card::after {
+.stat-card1::after {
     content: '';
     position: absolute;
     bottom: -10px;
     right: -10px;
-    width: 80px;
+    /* width: 80px; */
     height: 80px;
     background: rgba(76, 175, 80, 0.1); /* Transparent green */
     border-radius: 50%;
@@ -103,7 +104,7 @@
     filter: blur(15px);
 }
 
-.stat-card * {
+.stat-card1 * {
     position: relative;
     z-index: 1;
 }
